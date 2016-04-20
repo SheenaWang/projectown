@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>个人网站</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header id="index_head">
+		<img src="images/index_pic.jpg" width="100%">
+        <ul id="li_image">
+        	<li class="hiddenpic" id="pic1" onMouseOver="goHidden()" onMouseOut="goShow()"><a href="travel.html"><img src="images/1.png"></a></li>
+            <li class="hiddenpic" id="pic2"><a href="essay.html"><img src="images/2.png"></a></li>
+            <li class="hiddenpic" id="pic3"><a href="photo.html"><img src="images/3.png"></a></li>
+            <li class="hiddenpic" id="pic4"><a href="connection.html"><img src="images/4.png"></a></li>
+        </ul>
+	</header>
+    <nav id="index_nav">
+        	<table>
+            	<tr>
+            	<td>首页</td>
+                <td class="navline">|</td>
+                <td>留言</td>
+                <td class="navline">|</td>
+                <td>关于我</td>
+                </td>
+            </table>               
+    </nav>
+    <footer id="index_foot">
+    &copy;2016&nbsp;Sheena&nbsp;Wang
+    </footer>
+</body>
+<script src="js/jquery-1.12.3.min.js">
+</script>
+<script>
+//function1  	能实现鼠标移至图片图片会消失-出现的效果; 
+/*	用js实现
+function hidden(){
+		var h=document.getElementById("pic1");
+		h.style.visibility='hidden';
+	}
+	function show(){
+		var s=document.getElementById("pic1");
+		s.style.visibility='visible';
+	}
+*/
+
+/*	function goHidden(){
+		document.getElementById("pic1").style.visibility="hidden";
+		}
+	function goShow(){
+		document.getElementById("pic1").style.visibility="visible";
+		}
+		*/
+	//用jQuery实现，更快，能选用又有想要操作的，直接$(this)可以选中当前对象，注意文档的ready;
+		function goHidden(){
+			$(document).ready(function()
+			{
+				$(".hiddenpic").mouseover(function(){
+				$(this).hide();
+					}
+			)}
+		)}
+		function goShow(){
+			$(".hiddenpic").mouseout(function(){
+				$(this).show();
+					$(document).ready() }
+                        )
+		}
+
+//function2 	实现类似于热区，但是鼠标放置会出现文字而不是原先热区的功能，注意出现文字的速度减缓
+	function showTip(){
+		$(document).ready(function() {
+            //放置要执行的东西
+        });	
+	}
+
+</script>
+
+</html>

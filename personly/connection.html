@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>connection</title>
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+.div1 {
+    clear: both;
+    margin-left: 40px;
+    position: relative;
+    top: 80px;
+}
+.divpublic img{
+	box-shadow:2px 2px 2px #ccc;
+}
+.div2{
+	float:left;
+	display:inline;
+	margin-left:190px;
+	margin-top:-10px;
+}
+.div2 p{
+	line-height:30px;
+}
+span{
+	font-weight:normal;
+}
+.div3{
+	margin-left:480px;
+	line-height:30px;
+	margin-top:-6px;
+
+}
+#message{
+	float:left;
+	margin:40px 0 0 40px;
+}
+textarea{
+	width:645px;
+	height:150px;
+	border:#CCC 1px solid;
+
+}
+#show{
+	clear:both;
+	width:645px;
+	height:400px;
+	}
+.button{
+	color: #e4fce4;
+	padding: 4px 9px;
+	background-color: #099;
+	border-radius: 1px;
+	border: none;
+	margin: 5px 0 5px 5px;
+	float: right;
+	}
+</style>
+<body>
+<div id="container">
+    <nav>
+    	<div id="left" class="left">
+        		<br>
+            	<details><summary>My&nbsp;Travel&nbsp;··············</summary><p>•&nbsp;在路上，是我最美的故事。有你，有我的青春。</p></details>
+                <br>
+                <details><summary>Essay&nbsp;·······················</summary><p>•&nbsp;可能读了一本书，可能看了一部电影，也可能是当时的心情，我喜欢将这一切记录下来，不再年轻时便回头看看现在的自己。</p></details>
+                <br>
+                <details><summary>Photo&nbsp;······················</summary><p>•&nbsp;这是我到过的地方，这是我热爱的事物，我愿意用不同的眼光看待世界。</p></details>
+                <br>
+                <details><summary>Connection&nbsp;···········</summary><p>•&nbsp;欢迎联系我，朋友们。</p></details>
+        </div>       
+    </nav>
+    <section id="contain" class="left">
+    	<article id="up">
+        	<img src="images/smalllogo.png" width="55px" class="cap"><h2 class="cap pac" style="font-weight:normal;color:#099;">Connection</h2>
+            <hr>
+            <div class="div1 divpublic"><img src="images/headimg.png" width="15%"></div>
+            <div class="div2 divpublic">
+                <p><span>Name&nbsp;:&nbsp;</span>Sheena</p>
+                <p><span>E-mail&nbsp;:&nbsp;</span>wqn2156@163.com</p>
+                <p><span>City&nbsp;:&nbsp;</span>Hangzhou</p>
+            </div>
+            <div class="div3">
+            	<p><span>My&nbsp;github&nbsp;:&nbsp;</span>Sheena&nbsp;Wang</p>
+                <p><span>My&nbsp;Zcool&nbsp;:&nbsp;</span>当是好时</p>
+            </div>
+            
+            <!--使用html5进行本地存储-->
+
+        </article>
+
+            <div id="message">
+            	<textarea id="t1"></textarea>	<br>
+                <input type="button" class="button" onClick="addInfo()" value="留言">
+                <input type="button" class="button" onClick="cleanInfo()" value="清除留言"> <br>
+				<br>
+                <br>
+                          	  <p>留言板</p>           
+                <textarea id="show" readonly="readonly"></textarea>	
+
+
+                <br>
+
+			</div>
+<!--			<div id="show">
+            </div>
+-->         
+  
+    </section>
+	<footer>
+                <table id="bottom">
+            	<tr>
+            	<td><a href="index.html">首页</a></td>
+                <td class="navline">|</td>
+                <td>留言</td>
+                <td class="navline">|</td>
+                <td>关于我</td>
+                </td>
+            </table> 
+        	&copy;2016&nbsp;Sheena&nbsp;Wang
+    </footer>
+</div>
+</body>
+<script>
+	//留言
+	function addInfo(){
+		var info=document.getElementById("t1");
+		var LStorage=window.localStorage;//获取localstorsge对象
+		if(LStorage.myBoard){
+			var date=new Date();
+			LStorage.myBoard += t1.value+"\n发表时间："+date.toLocaleString()+"\n";
+			}
+		else{
+			var date=new Date();
+			LStorage.myBoard=t1.value+"\n发表时间："+date.toLocaleString()+"\n"+"\n";
+			}		
+		upInfo();
+		}
+		
+		//取出值
+		function upInfo(){
+			var LStorage=window.localStorage;
+			var show=document.getElementById("show");
+			if(window.localStorage.myBoard){
+				show.value=window.localStorage.getItem("myBoard");
+				}else{
+					show.value="没有留言哦~";
+					}
+			}
+			
+		//清除留言			
+		function cleanInfo(){
+			window.localStorage.removeItem("myBoard");
+			upInfo();
+			}
+</script>
+
+</html>
