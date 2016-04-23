@@ -1,0 +1,260 @@
+html{
+	background-color: rgba(68, 238, 68, 0.2);
+}
+body{
+	width:90%;
+	margin:0 auto;
+	box-shadow:0 4px 4px #333;
+}
+
+#navgater{
+	width:91.1%;
+	margin:0 auto;
+	text-align:center
+	color:#fff;
+
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    text-decoration: none;
+    background: #000000;
+    padding: 30px 56.4px;
+    font-family:"Microsoft YaHei";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+	color:#fff;
+	background-color:#f99f9f;
+	}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #f99f9f;
+}
+.navbar-default{
+	border:none;
+	background:#000;
+	color:#fff;
+}
+.dropdown-menu > dt > a{
+	color:#fff;
+	background:#000;
+	font-weight:normal;
+	clear:both;
+	padding:3px 20px;
+	white-space:nowrap;
+	text-decoration:none;
+}
+dt{
+	padding:6px 0;
+}
+.dropdown-menu > dt > a:hover{
+	color:#f99f9f;
+}
+.dropdown-menu{
+	padding:0;
+	background:#000;
+	border-radius: 0px;
+}
+.nav>li:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f99f9f;
+	padding: 0 0 12px 0;
+	transition: 0.5s all ease-in-out;   /*真是为我能发现这个感到牛逼啊！	总结：编程都是有规律的，总有相应的解决方案*/
+}
+.nav>li{
+	letter-spacing:8px;
+}
+#article1 span{
+	color:#f99f9f;	
+	}
+#article1 h1{	
+	letter-spacing:3px;
+	font-weight:600;
+	padding:1em 0em;
+	text-align:center;
+	font-family:'Quicksand', sans-serif;
+}
+#article2,#article3> h1{
+	letter-spacing:4px;
+	color:#f99f9f;
+	font-weight:300;
+	padding:1em 0em;
+	text-align:center;
+	font-family:'Quicksand', sans-serif;
+}
+.caption{
+	letter-spacing:4px;
+	color:#f99f9f;
+	font-weight:300;
+	padding:1em 0em;
+	text-align:center;
+	font-family:'Quicksand', sans-serif;
+}
+.banner img{
+	display: block;
+	width:91.1%;
+	margin:0 auto;
+}
+.content{
+	width:100%;
+	display:-moz-box;
+	-moz-box-orient:horizontal;
+	-moz-box-pack:center;
+}
+.listpic>img{
+	border-radius: 8px 8px 0 0;
+	width: 260px;
+	margin: 0 10px;
+	}  
+.picdown{
+	background-color:rgba(249,159,159,0.3);
+	width:260px;
+	margin:0 10px;
+	height:200px;
+	border-radius:0 0 8px 8px;
+}
+hr{
+	width: 250px;
+	border: 5px #f99f9f solid;
+	margin: 0 10px;
+}
+.p1{
+	letter-spacing: 8px;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+	padding: 15px 0 0 0;
+}
+p{
+	word-break: break-all;
+	overflow: hidden;
+	padding: 5px 15px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	}
+.btn{
+	background-color:#f99f9f;
+	border:none;
+	padding:8px 20px;
+	display:block;
+	margin:40px auto 0;
+}
+.btn:hover{
+	background-color:#f67d7d;
+}
+.content>.listpic:hover {
+    padding: 0;
+    transform: scale(1.1,1.1);
+    transition: 0.6s all ease-in-out;
+    cursor: pointer;
+}
+
+<!--第三段article的样式-->
+#article3{
+	display:block;
+	width:100%;
+	margin:0 auto;
+	}
+.left{
+	float:left;
+	width:51.1%;
+	height:600px;
+	margin: 0 0 0 54px;
+	color:#000;
+	text-align:center;
+}
+h1,h2,h3,h4,h5{
+	font-weight:300;
+}
+.right{
+	float:left;
+	width:40%;
+	height:600px;
+}
+.declare{
+	border:#000 1px solid;
+	font-size:24px;
+	font-weight:400;
+	width: 80%;
+	height: 300px;
+	margin: 40px auto 0;
+}
+.p3{
+	word-break:break-all;
+	margin:0px 30px;
+	color:#000;
+	font-size:18px;
+	font-weight:300;
+	white-space:normal;
+	text-align:left;
+	}
+.p3>a{
+	color:#000;
+	text-decoration:none;
+}
+
+
+/*article3右侧图片的排版等样式	*/
+.uppic{
+	float:right;
+	width:50%;	
+}
+.downpic{
+	float:right;
+	width:50%;
+}
+.leftpic{
+	width:100%;
+}
+.bottompic{
+	float:left;
+	width:50%;
+}
+.coml{
+	float:left;
+	width:17%;
+	height:440px;
+	overflow:hidden;
+	background-color:#000;
+}
+.comr{
+	float:right;
+	width:83%;
+	height:440px;
+	overflow:hidden;
+	background-color:#980;
+}
+/*关于footer的css	*/
+footer{
+	clear:both;
+	display:block;
+	text-align:center;
+	margin:0 auto;
+	color:#fff;
+	font-size:14px;
+	font-weight:300;
+	line-height:30px;
+	width:91.1%;
+	height:30px;
+	background-color:#000;	
+	margin-top:40px;
+	}
+.carousel-indicators li{
+	border:1px solid #fff;
+}
+.carousel-indicators>li:hover{
+	border:1px solid #f67d7d;
+	background:#f67d7d;
+}
+.carousel-indicators .active{
+	background:#f76d6d;
+	border:1px solid #f67d7d;
+}
+.carousel-inner	img{
+	display:block;
+	margin:0 auto;
+	width:91.1%;
+	}
